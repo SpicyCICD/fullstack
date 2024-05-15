@@ -28,3 +28,7 @@ jobs:
         run: |
           docker build -t 23mahesh/docker-full-stack-client:latest -f Dockerfile.frontend .
           docker push 23mahesh/docker-full-stack-client:latest
+
+      - name: Run docker-compose up
+        run: docker-compose up -d
+        working-directory: ${{ github.workspace }}
