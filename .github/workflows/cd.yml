@@ -21,5 +21,10 @@ jobs:
 
       - name: Build and push backend Docker image
         run: |
-          docker build -t 23mahesh/docker-full-stack-server:latest -f server/Dockerfile.backend .
+          docker build -t 23mahesh/docker-full-stack-server:latest -f Dockerfile.backend .
           docker push 23mahesh/docker-full-stack-server:latest
+
+      - name: Build and push frontend Docker image
+        run: |
+          docker build -t 23mahesh/docker-full-stack-client:latest -f Dockerfile.frontend .
+          docker push 23mahesh/docker-full-stack-client:latest
