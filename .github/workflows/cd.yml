@@ -21,10 +21,10 @@ jobs:
 
       - name: Build and push backend Docker image
         run: |
-          docker build -t 23mahesh/docker-full-stack-server:latest ./server
+          docker build -t 23mahesh/docker-full-stack-server:latest
           docker push 23mahesh/docker-full-stack-server:latest
 
       - name: Build and push frontend Docker image
         run: |
-          docker build -t 23mahesh/docker-full-stack-client:latest ./client
+          docker build -t 23mahesh/docker-full-stack-client:latest
           docker push 23mahesh/docker-full-stack-client:latest
